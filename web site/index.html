@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Blog Pessoal - Monique Cossi</title>
+
+    <style>
+        *{box-sizing:border-box}
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f7f3ee;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f8d7e6, #f3eee8);
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid #e0cfd8;
+        }
+
+        header img.profile {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            margin: 10px 0 5px;
+            font-size: 32px;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+        }
+
+        nav {
+            text-align: center;
+            padding: 15px 0;
+            background: #f8d7e6;
+            border-bottom: 1px solid #e5c6d5;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #444;
+        }
+
+        nav a:hover {
+            color: #b44e7a;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 960px;
+            margin: 30px auto;
+            display: grid;
+            gap: 26px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: #b44e7a;
+            margin-top: 0;
+        }
+
+        .viagens-content {
+            text-align: center;
+        }
+
+        .viagem-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 15px auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            border: 6px solid #ffffffcc;
+        }
+
+        .contato a {
+            color: #b44e7a;
+            text-decoration:none;
+            font-weight:600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* QUIZ */
+        .quiz-container {
+            background: #ffffffaa;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .quiz-container h2 {
+            color: #7b3fa1;
+        }
+
+        .quiz-question {
+            margin-bottom: 18px;
+        }
+
+        #submitQuiz {
+            background: #7b3fa1;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #submitQuiz:hover {
+            background: #692f8a;
+        }
+
+        #quizResult {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #4a2565;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="img/monique.jpg.png" alt="Foto de Monique Cossi">
+        <h1>Monique Cossi</h1>
+        <p>Blog pessoal • Meu cantinho delicado na internet ✨</p>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre Mim</a>
+        <a href="#hobby">Hobby</a>
+        <a href="#texto">Textos</a>
+        <a href="#viagens">Viagens</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>
+                Oi! Eu sou a <strong>Monique Cossi</strong>, tenho 17 anos, e criei este cantinho para compartilhar minhas experiências e inspirações.
+            </p>
+        </section>
+
+        <section id="hobby">
+            <h2>Meus Hobbies</h2>
+            <ul>
+                <li>📚 Ler histórias;</li>
+                <li>🎞️ Ver desenhos animados;</li>
+                <li>🎀 Fazer presentinhos;</li>
+                <li>✨ Fotografar momentos bonitos.</li>
+            </ul>
+        </section>
+
+        <section id="texto">
+            <h2>Texto Motivacional</h2>
+            <p>
+                A vida às vezes fica pesada, mas você já venceu tanto.  
+                Respira. Você é mais forte do que imagina. ✨
+            </p>
+        </section>
+
+        <section id="viagens">
+            <h2>Viagens</h2>
+            <div class="viagens-content">
+                <img src="img/parque.jpg">
+                <p>
+                    Viajar é colecionar memórias que aquecem o coração.
+                </p>
+            </div>
+        </section>
+
+        <!-- QUIZ COMPLETO -->
+        <section id="quiz" class="quiz-container">
+            <h2>Quiz: Você conhece a Monique?</h2>
+
+            <form id="quizForm">
+
+                <div class="quiz-question">
+                    <p>1. Qual a cor favorita da Monique?</p>
+                    <label><input type="radio" name="q1" value="a"> Roxo</label><br>
+                    <label><input type="radio" name="q1" value="b"> Azul</label><br>
+                    <label><input type="radio" name="q1" value="c"> Rosa</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p>2. O que ela mais gosta de fazer no tempo livre?</p>
+                    <label><input type="radio" name="q2" value="a"> Ler</label><br>
+                    <label><input type="radio" name="q2" value="b"> Maratonar séries</label><br>
+                    <label><input type="radio" name="q2" value="c"> Caminhar</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p>3. Como ela prefere o fim de semana?</p>
+                    <label><input type="radio" name="q3" value="a"> Em casa descansando</label><br>
+                    <label><input type="radio" name="q3" value="b"> Saindo com amigos</label><br>
+                    <label><input type="radio" name="q3" value="c"> Viajando</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p>4. Qual estilo combina mais com ela?</p>
+                    <label><input type="radio" name="q4" value="a"> Elegante</label><br>
+                    <label><input type="radio" name="q4" value="b"> Casual</label><br>
+                    <label><input type="radio" name="q4" value="c"> Esportivo</label>
+                </div>
+
+                <div class="quiz-question">
+                    <p>5. Qual dessas comidas ela prefere?</p>
+                    <label><input type="radio" name="q5" value="a"> Sushi</label><br>
+                    <label><input type="radio" name="q5" value="b"> Pizza</label><br>
+                    <label><input type="radio" name="q5" value="c"> Hambúrguer</label>
+                </div>
+
+                <button type="button" id="submitQuiz">Enviar Respostas</button>
+            </form>
+
+            <div id="quizResult"></div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p><strong>Email:</strong> moniquecossi2@gmail.com</p>
+            <p><strong>Telefone:</strong> (27) 99836-7612</p>
+        </section>
+
+    </div>
+
+    <footer>
+        © 2025 • Blog Pessoal de Monique Cossi
+    </footer>
+
+    <!-- JAVASCRIPT COMPLETO -->
+    <script>
+    document.getElementById("submitQuiz").addEventListener("click", function () {
+
+        const correctAnswers = {
+            q1: "b",
+            q2: "b",
+            q3: "b",
+            q4: "b",
+            q5: "a"
+        };
+
+        let score = 0;
+        let total = 5;
+
+        for (let q in correctAnswers) {
+            const selected = document.querySelector(`input[name="${q}"]:checked`);
+            if (selected && selected.value === correctAnswers[q]) {
+                score++;
+            }
+        }
+
+        let percentage = Math.round((score / total) * 100);
+
+        const resultDiv = document.getElementById("quizResult");
+
+        if (percentage <= 40) {
+            resultDiv.innerHTML = `Você acertou ${percentage}%... 🤔<br>  
+            Pode conhecer a Monique um pouquinho melhor!`;
+        } else if (percentage < 80) {
+            resultDiv.innerHTML = `Você acertou ${percentage}%! ✨<br>  
+            Mandou bem, conhece bastante a Monique!`;
+        } else {
+            resultDiv.innerHTML = `UAU! ${percentage}% de acertos! 💜<br>  
+            Você conhece a Monique profundamente!`;
+        }
+    });
+    </script>
+
+</body>
+</html>
